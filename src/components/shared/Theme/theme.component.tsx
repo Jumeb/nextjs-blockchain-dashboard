@@ -1,6 +1,6 @@
 'use client'
 
-import React, { memo, useMemo, useState } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 
 import styles from './styles.module.css'
 import { useTheme } from 'next-themes'
@@ -19,7 +19,7 @@ const ThemeSwitch: React.FC = () => {
       setTheme('light')
     }
   }
-  useMemo(() => {
+  useEffect(() => {
     if (theme === 'dark') {
       setLight(false)
       setTheme('dark')
@@ -28,16 +28,16 @@ const ThemeSwitch: React.FC = () => {
       setLight(true)
       setTheme('light')
     }
-  }, [theme])
+  }, [theme, setTheme])
   return (
     <div className={`${styles.switchContainer} dark:bg-cinder-light`} onClick={Switch}>
-      <Light className={`${styles.themeIcon} dark:fill-white left-1`} />
+      <Light className={`${styles.themeIcon} dark:fill-white left-1.5`} />
       <div
         className={`${styles.switchButton} ${
           light ? styles.switchLight : styles.switchDark
         } dark:!bg-cinder-dark`}
       />
-      <Dark className={`${styles.themeIcon} dark:fill-white right-1`} />
+      <Dark className={`${styles.themeIcon} dark:fill-white right-1.5`} />
     </div>
   )
 }

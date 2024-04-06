@@ -1,0 +1,146 @@
+/* https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+ Bad pratice, but I prefer clean code and I don't mind jumping between files
+*/
+
+.container {
+    @apply relative w-full flex flex-col rounded-xl bg-white shadow-md p-4 gap-4;
+    @apply lg:p-6 lg:gap-6;
+}
+
+.containerHeader {
+    @apply flex flex-row justify-between items-center sticky top-0
+}
+
+.containerHeader > h5 {
+    @apply text-cinder text-xl font-normal;
+}
+
+.containerHeader > a {
+    @apply text-primary-light text-base font-normal;
+}
+
+.scrollContainer {
+    @apply relative flex flex-col gap-4 flex-none overflow-x-auto flex-nowrap w-full;
+}
+
+.scrollContainer::-webkit-scrollbar {
+    @apply w-1 h-1;
+}
+  
+.scrollContainer::-webkit-scrollbar-thumb {
+    @apply w-1 h-1 bg-gray-600 rounded-md;
+}
+  
+.scrollContainer::-webkit-scrollbar-track {
+    @apply w-1 h-1 bg-gray-300 rounded-md;
+}
+
+
+
+/* Table header styles for the dash transaction header */
+
+.dashTableHeader {
+    @apply w-full flex justify-between items-center sticky top-0;
+}
+
+.dashTableBodyContainer {
+    @apply !w-full divide-y divide-primary;
+}
+
+
+.transferIcon {
+    @apply size-4 fill-gray-800;
+}
+
+.dashTableBody {
+    @apply w-full flex justify-between items-center py-4;
+}
+
+.dashTableHeader > div {
+    @apply cursor-pointer;
+}
+
+.dashTableHeader > div,
+.dashTableBody > div {
+    @apply flex-row flex-none justify-start items-center gap-2;
+    @apply xl:pl-6
+}
+
+.dashTableHeader > div:last-child,
+.dashTableBody > div:last-child  {
+    @apply justify-end;
+}
+
+.filterIcon {
+    @apply size-6 flex-none fill-cinder -rotate-90;
+}
+
+.dashTableHeader > div > span,
+.dashTableBody > div > span {
+    @apply text-sm text-cinder font-bold line-clamp-1;
+}
+
+.dashTableBody > div > span {
+    @apply font-normal;
+}
+
+.firstTransactionData {
+    @apply hidden;
+    @apply md:w-[12%] md:flex;
+    @apply lg:w-[10%];
+}
+
+.secondTransactionData {
+    @apply flex w-40;
+    @apply md:w-[26%];
+    @apply lg:w-[25%];
+}
+
+.thirdTransactionData {
+    @apply flex w-24;
+    @apply md:w-[18%];
+}
+
+.fourthTransactionData {
+    @apply hidden;
+    @apply lg:w-[5%] lg:flex;
+}
+
+.fifthTransactionData {
+    @apply flex w-24;
+    @apply md:w-[18%];
+}
+
+.sixthTransactionData {
+    @apply flex w-28;
+    @apply md:w-[13%];
+    @apply lg:w-[12%];
+}
+
+.seventhTransactionData {
+    @apply flex w-20;
+    @apply md:w-[13%];
+    @apply lg:w-[12%];
+}
+
+/* Block data styles */
+
+.firstBlockData {
+    @apply flex w-32;
+    @apply md:w-[25%];
+}
+
+.secondBlockData {
+    @apply flex w-28;
+    @apply md:w-[25%];
+}
+
+.thirdBlockData {
+    @apply flex w-28;
+    @apply md:w-[25%];
+}
+
+.fourthBlockData {
+    @apply flex w-24;
+    @apply md:w-[25%];
+}
