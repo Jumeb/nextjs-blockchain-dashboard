@@ -3,3 +3,13 @@ export interface StampProps {
     title: string,
     value: string,
 }
+
+export interface TypeProps {
+    type: TypeEnum
+}
+
+export enum TypeEnum {
+    PENDING,
+    CANCELLED,
+    SUCCESS
+}

@@ -15,12 +15,11 @@ const Card: React.FC<CardProps> = ({ title, value, data }) => {
   const closeCard = useCallback(() => {
     setExpand(false)
   }, [])
-  console.log(cardRef)
   const position = { left: cardRef?.current?.offsetLeft, top: cardRef?.current?.offsetTop }
   UseOnClickOutside(cardRef, closeCard)
 
   return (
-    <div className='w-full lg:h-[256px]' ref={cardRef}>
+    <div className='w-full lg:h-[256px] flex justify-center items-center' ref={cardRef}>
       <div
         style={{
           left: position.left,

@@ -7,6 +7,8 @@ import { Block, Heirachy, Nodes, Time, Transaction, Wallet } from '@/lib/assets/
 import ThemeSwitch from '@/components/shared/Theme/theme.component'
 import ThemeProvide from '@/components/shared/Theme/ThemeProvider.component'
 import Card from '@/components/shared/Card'
+import DashTransaction from '@/components/blocks/Transactions/dash_transaction'
+import DashBlock from '@/components/blocks/Transactions/dash_blocks'
 
 const Test: React.FC = () => {
   const stamps: StampProps[] = [
@@ -58,6 +60,18 @@ const Test: React.FC = () => {
             <Card title='Transactions' value='46 323' data={data} />
             <Card title='Address Growth' value='4 234' data={data} />
             <Card title='Blocks' value='5 234' data={data} />
+          </div>
+        </section>
+        <section id='Transactions' className={styles.sectionContainer}>
+          <h1>Transactions</h1>
+          <div className={styles.transactionContainer}>
+            <DashTransaction />
+          </div>
+        </section>
+        <section id='Blocks' className={styles.sectionContainer}>
+          <h1>Blocks</h1>
+          <div className={styles.transactionContainer}>
+            <DashBlock />
           </div>
         </section>
       </div>

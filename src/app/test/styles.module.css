@@ -28,3 +28,8 @@
   @apply flex flex-row justify-between w-full items-center gap-4 duration-500 ease-in-out;
 }
 
+
+.transactionContainer {
+  @apply flex flex-row justify-between w-full items-center gap-4 duration-500 ease-in-out;
+}
+

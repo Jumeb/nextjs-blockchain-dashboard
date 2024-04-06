@@ -1,0 +1,7 @@
+.type {
+    @apply size-8 rounded-lg flex justify-center items-center bg-gray-300/50;
+}
+
+.type > svg {
+    @apply size-5;
+}
