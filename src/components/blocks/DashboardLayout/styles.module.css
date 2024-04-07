@@ -12,7 +12,7 @@
 }
 
 .containerRight {
-    @apply flex flex-col gap-4 bg-off_white  w-full;
+    @apply flex flex-col gap-4 bg-off_white w-full;
     @apply lg:w-[85%];
 }
 

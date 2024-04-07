@@ -3,7 +3,7 @@
 */
 
 .container {
-  @apply bg-white w-full flex flex-col justify-start items-start gap-4 p-4 h-full;
+  @apply w-full flex flex-col justify-start items-start gap-4 p-4 h-full;
   @apply md:p-8 md:gap-8;
   @apply xl:px-16 xl:gap-16;
 }
