@@ -12,7 +12,7 @@ const DashTransaction: React.FC = () => {
       {/* Dash transaction header */}
       <div className={styles.containerHeader}>
         <h5 className='dark:text-white'>Transactions</h5>
-        <Link href={'#'}>View all</Link>
+        <Link href={'#'} className='dark:text-primary-light'>View all</Link>
       </div>
 
       <div className={styles.scrollContainer}>
@@ -52,16 +52,16 @@ const DashTransaction: React.FC = () => {
         <div className={styles.dashTableBody}>
           <div className={styles.firstTransactionData}><Type type={TypeEnum.CANCELLED} /></div>
           <div className={styles.secondTransactionData}>
-            <span className='!font-bold !text-primary'>0x183c09...d7e953b</span>
+            <span className='!font-bold !text-primary dark:!text-primary-light'>0x183c09...d7e953b</span>
           </div>
           <div className={styles.thirdTransactionData}>
-            <span className='!font-bold !text-primary'>zinqw...a5q</span>
+            <span className='!font-bold !text-primary dark:!text-primary-light'>zinqw...a5q</span>
           </div>
           <div className={[styles.fourthTransactionData, '!px-0'].join(' ')}>
             <Arrow className={[styles.transferIcon, 'dark:fill-white'].join(' ')} />
           </div>
           <div className={styles.fifthTransactionData}>
-            <span className='!font-bold !text-primary'>serss...a5q</span>
+            <span className='!font-bold !text-primary dark:!text-primary-light'>serss...a5q</span>
           </div>
           <div className={styles.sixthTransactionData}>
             <span className='dark:text-white'>10 WIL</span>
@@ -74,16 +74,16 @@ const DashTransaction: React.FC = () => {
         <div className={styles.dashTableBody}>
           <div className={styles.firstTransactionData}><Type type={TypeEnum.PENDING} /></div>
           <div className={styles.secondTransactionData}>
-            <span className='!font-bold !text-primary'>0x183c09...d7e953b</span>
+            <span className='!font-bold !text-primary dark:!text-primary-light'>0x183c09...d7e953b</span>
           </div>
           <div className={styles.thirdTransactionData}>
-            <span className='!font-bold !text-primary'>zinqw...a5q</span>
+            <span className='!font-bold !text-primary dark:!text-primary-light'>zinqw...a5q</span>
           </div>
           <div className={[styles.fourthTransactionData, '!px-0'].join(' ')}>
             <Arrow className={[styles.transferIcon, 'dark:fill-white'].join(' ')} />
           </div>
           <div className={styles.fifthTransactionData}>
-            <span className='!font-bold !text-primary'>serss...a5q</span>
+            <span className='!font-bold !text-primary dark:!text-primary-light'>serss...a5q</span>
           </div>
           <div className={styles.sixthTransactionData}>
             <span className='dark:text-white'>10 WIL</span>
@@ -96,16 +96,16 @@ const DashTransaction: React.FC = () => {
         <div className={styles.dashTableBody}>
           <div className={styles.firstTransactionData}><Type type={TypeEnum.SUCCESS} /></div>
           <div className={styles.secondTransactionData}>
-            <span className='!font-bold !text-primary'>0x183c09...d7e953b</span>
+            <span className='!font-bold !text-primary dark:!text-primary-light'>0x183c09...d7e953b</span>
           </div>
           <div className={styles.thirdTransactionData}>
-            <span className='!font-bold !text-primary'>zinqw...a5q</span>
+            <span className='!font-bold !text-primary dark:!text-primary-light'>zinqw...a5q</span>
           </div>
           <div className={[styles.fourthTransactionData, '!px-0'].join(' ')}>
             <Arrow className={[styles.transferIcon, 'dark:fill-white'].join(' ')} />
           </div>
           <div className={styles.fifthTransactionData}>
-            <span className='!font-bold !text-primary'>serss...a5q</span>
+            <span className='!font-bold !text-primary dark:!text-primary-light'>serss...a5q</span>
           </div>
           <div className={styles.sixthTransactionData}>
             <span className='dark:text-white'>10 WIL</span>

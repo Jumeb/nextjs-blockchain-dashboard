@@ -12,11 +12,11 @@
 }
 
 .containerHeader > h5 {
-    @apply text-cinder text-xl font-normal;
+    @apply text-gray-dark text-xl font-normal;
 }
 
 .containerHeader > a {
-    @apply text-primary-light text-base font-normal;
+    @apply text-primary text-base font-normal;
 }
 
 .scrollContainer {
@@ -77,7 +77,7 @@
 
 .dashTableHeader > div > span,
 .dashTableBody > div > span {
-    @apply text-sm text-cinder font-bold line-clamp-1;
+    @apply text-sm text-gray-dark font-bold line-clamp-1;
 }
 
 .dashTableBody > div > span {

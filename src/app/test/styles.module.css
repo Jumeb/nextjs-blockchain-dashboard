@@ -3,13 +3,13 @@
 */
 
 .container {
-  @apply bg-white w-full flex flex-col justify-start items-start gap-4 p-4 min-h-svh;
-  @apply md:p-16 md:gap-8;
-  @apply xl:px-32 xl:gap-16;
+  @apply bg-white w-full flex flex-col justify-start items-start gap-4 p-4 h-full;
+  @apply md:p-8 md:gap-8;
+  @apply xl:px-16 xl:gap-16;
 }
 
 .sectionContainer {
-  @apply w-full flex flex-col justify-start items-start gap-4;
+  @apply w-full flex flex-col justify-start items-start gap-4 scroll-mt-6;
   @apply xl:gap-8;
 }
 
@@ -25,7 +25,7 @@
 
 
 .cardContainer {
-  @apply flex flex-row justify-between w-full items-center gap-4 duration-500 ease-in-out;
+  @apply flex flex-row justify-between w-full h-full flex-none items-center gap-4 duration-500 ease-in-out overflow-auto;
 }
 
 

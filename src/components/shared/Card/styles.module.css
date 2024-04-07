@@ -10,7 +10,7 @@
 
 .cardExpand {
     @apply fixed !left-1/2 -translate-y-1/2 z-50 !top-1/2 -translate-x-1/2 scale-[1.7];
-    box-shadow: 0 0 200px 1000rem rgba(26, 60, 162, 0.191)
+    box-shadow: 0 0 2000rem 1000rem rgba(26, 60, 162, 0.191)
 }
 
 .cardHeader {
@@ -22,11 +22,11 @@
 }
 
 .cardDetail > h5 {
-    @apply text-xs font-normal text-cinder-dark;
+    @apply text-xs font-normal text-gray-dark;
 }
 
 .cardDetail > p {
-    @apply text-sm font-semibold text-cinder-dark;
+    @apply text-sm font-semibold text-gray-dark;
 }
 
 .cardSwitch {

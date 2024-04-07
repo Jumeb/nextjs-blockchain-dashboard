@@ -1,0 +1,65 @@
+/* https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+ Bad pratice, but I prefer clean code and I don't mind jumping between files
+*/
+
+.container {
+    @apply relative w-full flex flex-row justify-start items-start min-h-dvh;
+}
+
+.containerLeft {
+    @apply absolute -translate-x-[110%] z-20 left-0 right-0 flex flex-col gap-4 bg-white/50 backdrop-blur-md h-dvh top-0 duration-500 ease-in-out;
+    @apply lg:w-[15%] lg:translate-x-0 lg:!sticky lg:right-auto;
+}
+
+.containerRight {
+    @apply flex flex-col gap-4 bg-off_white  w-full;
+    @apply lg:w-[85%];
+}
+
+.sideNav {
+    @apply w-[80%] z-30 bg-white h-full relative p-4 flex flex-col justify-start items-start gap-4;
+    @apply lg:p-6 lg:gap-12 lg:w-full;
+}
+
+.logoContainer {
+    @apply w-full flex justify-start items-start translate-x-24;
+    @apply lg:translate-x-0;
+}
+
+.linksContainer {
+    @apply flex flex-col gap-4 divide-y divide-gray-300 w-full;
+}
+
+.appLinks,
+.externalLinks {
+    @apply flex flex-col gap-4 w-full;
+}
+
+.switchTheme {
+    @apply absolute bottom-4 left-4 lg:bottom-6 lg:left-6;
+}
+
+.checkToggle {
+    @apply invisible absolute;
+}
+
+.navToggler {
+    @apply absolute top-6 z-40 left-6 size-12 rounded-xl flex justify-center items-center bg-white shadow-md overflow-clip;
+    @apply lg:hidden;
+}
+
+.navHamburger {
+    @apply relative h-0.5 w-[50%] bg-cinder-light rounded-md duration-300 ease-in-out;
+    @apply before:content-[''] before:absolute before:translate-y-1.5 before:h-0.5 before:w-full before:bg-cinder-light before:rounded-md before:z-10 before:duration-300 before:ease-in-out;
+    @apply after:content-[''] after:absolute after:-translate-y-1.5 after:h-0.5 after:w-full after:bg-cinder-light after:rounded-md after:z-10 after:duration-300 after:ease-in-out;
+}
+
+.checkToggle:checked ~ .containerLeft {
+    @apply translate-x-0;
+}
+
+.checkToggle:checked ~ .navToggler > .navHamburger {
+    @apply translate-x-full bg-transparent;
+    @apply before:translate-y-0 before:rotate-45 before:-translate-x-full before:opacity-100;
+    @apply after:translate-y-0 after:-rotate-45 after:-translate-x-full;
+}

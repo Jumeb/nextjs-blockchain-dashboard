@@ -10,7 +10,7 @@ const DashBlock: React.FC = () => {
       {/* Dash Block header */}
       <div className={styles.containerHeader}>
         <h5 className='dark:text-white'>Blocks</h5>
-        <Link href={'#'}>View all</Link>
+        <Link href={'#'} className='dark:text-primary-light'>View all</Link>
       </div>
 
       <div className={styles.scrollContainer}>
@@ -40,7 +40,7 @@ const DashBlock: React.FC = () => {
         <div className={[styles.dashTableBodyContainer, 'dark:divide-gray-600'].join(' ')}>
           <div className={styles.dashTableBody}>
             <div className={styles.firstBlockData}>
-              <span className='!font-bold !text-primary'>#1544968</span>
+              <span className='!font-bold !text-primary dark:!text-primary-light'>#1544968</span>
             </div>
             <div className={styles.secondBlockData}>
               <span className='dark:text-white'>11 Transaction</span>

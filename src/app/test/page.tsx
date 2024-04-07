@@ -54,7 +54,7 @@ const Test: React.FC = () => {
             <ThemeSwitch />
           </div>
         </section>
-        <section id='Cards' className={styles.sectionContainer}>
+        <section id='cards' className={styles.sectionContainer}>
           <h1>Cards</h1>
           <div className={styles.cardContainer}>
             <Card title='Transactions' value='46 323' data={data} />
@@ -62,13 +62,13 @@ const Test: React.FC = () => {
             <Card title='Blocks' value='5 234' data={data} />
           </div>
         </section>
-        <section id='Transactions' className={styles.sectionContainer}>
+        <section id='transactions' className={styles.sectionContainer}>
           <h1>Transactions</h1>
           <div className={styles.transactionContainer}>
             <DashTransaction />
           </div>
         </section>
-        <section id='Blocks' className={styles.sectionContainer}>
+        <section id='blocks' className={styles.sectionContainer}>
           <h1>Blocks</h1>
           <div className={styles.transactionContainer}>
             <DashBlock />
