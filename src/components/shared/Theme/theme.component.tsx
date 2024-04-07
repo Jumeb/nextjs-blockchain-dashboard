@@ -19,6 +19,7 @@ const ThemeSwitch: React.FC = () => {
       setTheme('light')
     }
   }
+
   useEffect(() => {
     if (theme === 'dark') {
       setLight(false)

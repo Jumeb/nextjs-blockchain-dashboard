@@ -13,3 +13,10 @@ export enum TypeEnum {
     CANCELLED,
     SUCCESS
 }
+
+export interface NavLinkProps {
+    href: string,
+    label: string,
+    icon: JSX.Element,
+    disabled: boolean,
+}

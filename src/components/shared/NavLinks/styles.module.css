@@ -1,0 +1,40 @@
+.link {
+    @apply relative rounded-xl z-20 p-2.5 px-4 flex flex-row justify-start items-center gap-2 w-full overflow-clip;
+    @apply before:content-[''] before:-z-10 before:absolute before:bottom-0 before:left-0 before:origin-left before:scale-x-0 before:h-full before:w-full before:bg-primary/20 before:duration-500 before:ease-in-out before:hover:scale-x-100;
+    @apply *:duration-500 *:ease-in-out *:hover:fill-primary *:hover:text-primary;
+    /* @apply after:content-[''] after:-z-10 after:absolute after:top-0 after:left-0 after:origin-top after:scale-y-0 after:h-full after:w-full after:bg-primary after:duration-500 after:ease-in-out after:hover:scale-y-100; */
+}
+
+.link > svg {
+    @apply size-6 fill-cinder;
+}
+
+.link > span {
+    @apply font-light text-gray-47 text-sm line-clamp-1;
+}
+
+.linkActive {
+    @apply bg-primary;
+}
+
+.linkActive > svg {
+    @apply fill-white;
+}
+
+.linkActive > span {
+    @apply text-white;
+}
+
+.linkDisabled  {
+    @apply bg-gray-light/20;
+    @apply before:!bg-transparent before:hover:!bg-transparent;
+    @apply *:hover:!fill-gray-8b *:hover:!text-gray-8b;
+}
+
+.linkDisabled > svg {
+    @apply !fill-gray-8b;
+}
+
+.linkDisabled > span {
+    @apply !text-gray-8b;
+}

@@ -7,7 +7,7 @@
 }
 
 .switchContainer {
-    @apply relative h-8 w-20 rounded-full bg-primary-light/50 flex flex-row justify-between items-center cursor-pointer;
+    @apply relative h-8 w-20 rounded-full bg-off_white flex flex-row justify-between items-center cursor-pointer;
 }
 
 .switchButton {

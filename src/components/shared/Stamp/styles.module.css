@@ -7,11 +7,11 @@
 }
 
 .stampIconContainer {
-    @apply size-10 rounded-xl bg-primary-light/10 flex justify-center items-center;
+    @apply size-10 rounded-xl bg-white flex justify-center items-center;
 }
 
 .stampIconContainer > svg {
-    @apply size-7 fill-primary;
+    @apply size-7 fill-cinder;
 }
 
 .stampDetails {
@@ -19,9 +19,9 @@
 }
 
 .stampDetails > h6 {
-    @apply font-thin text-cinder text-sm;
+    @apply font-thin text-gray-dark text-sm;
 }
 
 .stampDetails > p {
-    @apply font-bold text-cinder text-sm;
+    @apply font-bold text-gray-dark text-sm;
 }

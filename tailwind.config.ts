@@ -22,7 +22,7 @@ const config: Config = {
       },
       colors: {
         primary: {
-          'light': "#1CD3F4",
+          'light': "#36ccc3",
           DEFAULT: '#077a8f',
           'dark': '#021F24'
         },
@@ -30,7 +30,17 @@ const config: Config = {
           'light': "#202029",
           DEFAULT: "#14141f",
           'dark': '#000000',
-        }
+        },
+        gray: {
+          'e8': '#e8e8e8',
+          'd1':'#d1d1d1',
+          'light': '#bababa',
+          '8b': '#8b8b8b',
+          DEFAULT: '#5e5e5e',
+          '47': '#474747',
+          'dark': '#191919'
+        },
+        'off_white': "#f7f8f9",
       }
     },
   },
