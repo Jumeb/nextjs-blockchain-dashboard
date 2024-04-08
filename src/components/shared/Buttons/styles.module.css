@@ -1,0 +1,20 @@
+.button {
+    @apply w-full outline-none rounded-lg px-4 py-2.5 flex flex-row justify-center items-center gap-1 bg-primary;
+}
+
+.button > svg {
+    @apply size-7 fill-white;
+}
+
+.disabledButton {
+    @apply !bg-gray-300
+}
+
+.disabledButton > svg {
+    @apply !fill-gray-100;
+}
+
+.button > span {
+    @apply text-base font-normal text-white hidden;
+    @apply md:block;
+}

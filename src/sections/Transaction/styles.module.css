@@ -1,0 +1,7 @@
+/* https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+ Bad pratice, but I prefer clean code and I don't mind jumping between files
+*/
+
+.container {
+    @apply w-full flex flex-col justify-center items-center gap-4;
+}

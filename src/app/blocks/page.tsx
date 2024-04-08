@@ -2,18 +2,18 @@ import React from 'react'
 
 import styles from './styles.module.css'
 import TopBar from '@/components/blocks/TopBar'
-import Transactions from '@/sections/Transaction/Transactions'
+import Blocks from '@/sections/Block/Blocks'
 
-const TransactionsPage: React.FC = () => {
+const BlocksPage: React.FC = () => {
   return (
     <main className={[styles.container, 'dark:bg-cinder-light'].join(' ')}>
       <TopBar />
       <div className={styles.containerContent}>
-        <h1 className='dark:text-white'>Transactions</h1>
-        <Transactions />
+        <h1 className='dark:text-white'>Blocks</h1>
+        <Blocks />
       </div>
     </main>
   )
 }
 
-export default TransactionsPage
+export default BlocksPage

@@ -41,15 +41,28 @@ export interface StatsProps {
 }
 
 export interface DropDownProps {
-  options: OptionsType[]
-  value: string
-  label: string
-  setValue: (a: OptionsType, b: string) => void
-  name: string
-  disabled?: boolean
+    options: OptionsType[]
+    value: string
+    label: string
+    setValue: (a: OptionsType, b: string) => void
+    name: string
+    disabled?: boolean
 }
 
 export type OptionsType = {
-  value: string | number
-  label: string
+    value: string | number
+    label: string
+}
+
+export interface ButtonProps {
+    text: string
+    onClick: () => void
+    icon: JSX.Element
+    iconDir?: IconDir
+    disabled?: boolean
+}
+
+export enum IconDir {
+    LEFT,
+    RIGHT
 }

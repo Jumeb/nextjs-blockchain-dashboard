@@ -26,7 +26,7 @@
 }
 
 .linkDisabled  {
-    @apply bg-gray-light/20;
+    @apply bg-gray-light/20 cursor-not-allowed;
     @apply before:!bg-transparent before:hover:!bg-transparent;
     @apply *:hover:!fill-gray-8b *:hover:!text-gray-8b;
 }

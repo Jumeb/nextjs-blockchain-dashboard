@@ -10,8 +10,6 @@ import { NavLinkProps } from '@/lib/types/components.types'
 import {
   Block,
   Dashboard,
-  Ecosystem,
-  Heirachy,
   Nodes,
   Staking,
   Stats,
@@ -23,13 +21,13 @@ import {
 const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const links: NavLinkProps[] = [
     { href: '/', label: 'Dashboard', icon: <Dashboard />, disabled: false },
-    { href: '/addresses', label: 'Addresses', icon: <Wallet />, disabled: false },
     { href: '/transactions', label: 'Transactions', icon: <Transaction />, disabled: false },
     { href: '/blocks', label: 'Blocks', icon: <Block />, disabled: false },
-    { href: '/stats', label: 'Stats', icon: <Stats />, disabled: false },
-    { href: '/tokens', label: 'Tokens', icon: <Token />, disabled: false },
-    { href: '/staking', label: 'Staking', icon: <Staking />, disabled: false },
-    { href: '/ecosystem', label: 'Ecosystem', icon: <Nodes />, disabled: false },
+    { href: '/addresses', label: 'Addresses', icon: <Wallet />, disabled: true },
+    { href: '/stats', label: 'Stats', icon: <Stats />, disabled: true },
+    { href: '/tokens', label: 'Tokens', icon: <Token />, disabled: true },
+    { href: '/staking', label: 'Staking', icon: <Staking />, disabled: true },
+    { href: '/ecosystem', label: 'Ecosystem', icon: <Nodes />, disabled: true },
   ]
   return (
     <ThemeProvide>
