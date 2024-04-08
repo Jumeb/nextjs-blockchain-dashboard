@@ -3,16 +3,17 @@
 */
 
 .container {
-    @apply relative w-full flex flex-col rounded-xl bg-white shadow-md p-4 gap-4;
+    @apply relative w-full flex-col rounded-xl bg-white shadow-md p-4 gap-4;
     @apply lg:p-6 lg:gap-6;
 }
 
 .containerHeader {
-    @apply flex flex-row justify-between items-center sticky top-0
+    @apply flex flex-row justify-between items-center sticky top-[10.5rem] z-10 bg-white/20 backdrop-blur py-2.5;
+    @apply md:top-0 md:py-0
 }
 
 .containerHeader > h5 {
-    @apply text-gray-dark text-xl font-normal;
+    @apply text-gray-dark text-xl font-normal dark:text-white;
 }
 
 .containerHeader > a {
@@ -83,6 +84,8 @@
     @apply font-normal;
 }
 
+/* Dashboard Transactions data styles */
+
 .firstTransactionData {
     @apply hidden;
     @apply md:w-[12%] md:flex;
@@ -122,7 +125,8 @@
     @apply lg:w-[12%];
 }
 
-/* Block data styles */
+
+/* Dashboard Block data styles */
 
 .firstBlockData {
     @apply flex w-32;
@@ -142,4 +146,155 @@
 .fourthBlockData {
     @apply flex w-24;
     @apply md:w-[25%];
+}
+
+
+/* Transactions Table data styles */
+
+
+.firstTransData {
+    @apply hidden;
+    @apply md:w-[12%] md:flex;
+    @apply lg:w-[6%];
+}
+
+.secondTransData {
+    @apply flex w-40;
+    @apply md:w-[26%];
+    @apply lg:w-[18%];
+}
+
+.thirdTransData {
+    @apply flex w-24;
+    @apply md:w-[16%];
+}
+
+.fourthTransData {
+    @apply hidden;
+    @apply lg:w-[11%] lg:flex;
+}
+
+.fifthTransData {
+    @apply flex w-24;
+    @apply md:w-[6%];
+}
+
+.sixthTransData {
+    @apply flex w-28;
+    @apply md:w-[13%];
+    @apply lg:w-[11%];
+}
+
+.seventhTransData {
+    @apply flex w-20;
+    @apply md:w-[13%];
+    @apply lg:w-[13%];
+}
+
+.eighthTransData {
+    @apply flex w-20;
+    @apply md:w-[13%];
+    @apply lg:w-[14%];
+}
+
+.ninthTransData {
+    @apply flex w-20;
+    @apply md:w-[13%];
+    @apply lg:w-[5%];
+}
+
+/* Blocks Table data styles */
+
+
+.firstBlocksData {
+    @apply hidden;
+    @apply md:w-[12%] md:flex;
+    @apply lg:w-[9%];
+}
+
+.secondBlocksData {
+    @apply flex w-40;
+    @apply md:w-[26%];
+    @apply lg:w-[14%];
+}
+
+.thirdBlocksData {
+    @apply flex w-24;
+    @apply md:w-[7%];
+}
+
+.fourthBlocksData {
+    @apply hidden;
+    @apply lg:w-[14%] lg:flex;
+}
+
+.fifthBlocksData {
+    @apply flex w-24;
+    @apply md:w-[12%];
+}
+
+.sixthBlocksData {
+    @apply flex w-28;
+    @apply md:w-[13%];
+    @apply lg:w-[12%];
+}
+
+.seventhBlocksData {
+    @apply flex w-20;
+    @apply md:w-[13%];
+    @apply lg:w-[13%];
+}
+
+.eighthBlocksData {
+    @apply flex w-20;
+    @apply md:w-[13%];
+    @apply lg:w-[12%];
+}
+
+.ninthBlocksData {
+    @apply flex w-20;
+    @apply md:w-[13%];
+    @apply lg:w-[7%];
+}
+
+
+
+/* transaction and block card styles */
+
+.cards {
+    @apply relative flex-col gap-6 w-full my-4 flex md:hidden;
+}
+
+.card {
+    @apply relative w-full flex-col rounded-xl bg-white shadow-md p-5 gap-4;
+}
+
+.cardHeader, 
+.cardBodyData {
+    @apply flex flex-row justify-between items-center;
+}
+
+.cardHeader > span {
+    @apply font-normal text-cinder text-sm;
+}
+
+.cardBody {
+    @apply flex flex-col w-full gap-3 divide-y divide-primary-light;
+}
+
+.cardBodyData {
+    @apply flex flex-row justify-between items-center w-full pt-3;
+}
+
+.cardBodyData > span {
+    @apply font-semibold text-cinder text-sm w-1/3;
+}
+
+.cardBodyData > p {
+    @apply font-normal text-cinder text-sm w-2/3;
+}
+
+
+.buttonWrapper {
+    @apply flex flex-row mx-auto gap-8
 }

@@ -6,7 +6,7 @@
     @apply w-96 rounded-xl h-auto  bg-white shadow-md p-4 duration-500 ease-in-out;
     @apply lg:p-6 lg:w-80;
     @apply xl:w-full xl:h-64;
-    @apply 2xl:h-80;
+    @apply 2xl:h-auto;
 }
 
 .cardExpand {

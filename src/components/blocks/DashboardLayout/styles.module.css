@@ -7,12 +7,12 @@
 }
 
 .containerLeft {
-    @apply absolute -translate-x-[110%] z-40 left-0 right-0 flex flex-col gap-4 bg-white/50 backdrop-blur-md h-dvh top-0 duration-500 ease-in-out;
+    @apply fixed -translate-x-[110%] z-40 left-0 right-0 flex flex-col gap-4 bg-white/50 backdrop-blur-md h-dvh top-0 duration-500 ease-in-out;
     @apply lg:w-[12%] lg:translate-x-0 lg:!sticky lg:right-auto;
 }
 
 .containerRight {
-    @apply flex flex-col gap-4 bg-off_white w-full;
+    @apply flex flex-col justify-start items-start gap-4 bg-off_white w-full;
     @apply lg:w-[88%];
 }
 
@@ -22,8 +22,13 @@
 }
 
 .logoContainer {
-    @apply w-full flex justify-start items-start translate-x-24;
+    @apply w-fit h-12 flex justify-start items-start translate-x-24;
+    @apply md:h-14;
     @apply lg:translate-x-0;
+}
+
+.logoContainer > img {
+    @apply w-full h-full object-contain object-center;
 }
 
 .linksContainer {

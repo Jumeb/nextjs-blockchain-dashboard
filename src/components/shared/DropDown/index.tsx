@@ -19,20 +19,20 @@ const DropDown: React.FC<DropDownProps> = ({
     setDrop(!drop)
   }
   return (
-    <div className={`${styles.dropdown} ${disabled ? 'cursor-not-allowed' : 'cursor-pointer'}`}>
-      <div className={`${styles.dropdownSelect}`} onClick={() => setDrop(!drop)}>
-        <span>{options.find((opt) => opt.value === value)?.label || label}</span>
+    <div className={[styles.dropdown, disabled ? 'cursor-not-allowed' : 'cursor-pointer'].join(' ')}>
+      <div className={[styles.dropdownSelect, 'dark:bg-cinder-light'].join(' ')} onClick={() => setDrop(!drop)}>
+        <span className='dark:text-white'>{options.find((opt) => opt.value === value)?.label || label}</span>
         <div className={styles.dropdownIconContainer} onClick={() => setDrop(!drop)}>
-          <Chevron className={[styles.dropdownIcon, drop ? '-rotate-90' : 'rotate-90'].join(' ')} />
+          <Chevron className={[styles.dropdownIcon, drop ? 'rotate-90' : '-rotate-90', 'dark:fill-white'].join(' ')} />
         </div>
       </div>
-      <div className={[styles.dropdownList, drop ? styles.dropList : styles.rollList].join(' ')}>
+      <div className={[styles.dropdownList, drop ? styles.dropList : styles.rollList, 'dark:bg-cinder'].join(' ')}>
         {options.map((option, index: number) => (
           <button
             key={index + option.value.toString()}
             className={[
               styles.dropdownItem,
-              value === option.value ? '!bg-off_white !text-cinder' : '',
+              value === option.value ? '!bg-off_white !text-cinder dark:!bg-gray-e8/20 dark:!text-white' : '', 'dark:hover:bg-cinder-light dark:bg-transparent dark:text-white'
             ].join(' ')}
             onClick={() => handleSelect(option)}
           >
