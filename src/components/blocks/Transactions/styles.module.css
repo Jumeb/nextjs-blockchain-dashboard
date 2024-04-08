@@ -63,7 +63,6 @@
 .dashTableHeader > div,
 .dashTableBody > div {
     @apply flex-row flex-none justify-start items-center gap-2;
-    @apply xl:pl-6
 }
 
 .dashTableHeader > div:last-child,

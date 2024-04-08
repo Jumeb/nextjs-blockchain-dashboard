@@ -7,18 +7,18 @@
 }
 
 .containerLeft {
-    @apply absolute -translate-x-[110%] z-40 left-0 right-0 flex flex-col gap-4 bg-white/50 backdrop-blur-md h-dvh top-0 duration-500 ease-in-out;
-    @apply lg:w-[12%] lg:translate-x-0 lg:!sticky lg:right-auto;
+    @apply absolute -translate-x-[110%] z-20 left-0 right-0 flex flex-col gap-4 bg-white/50 backdrop-blur-md h-dvh top-0 duration-500 ease-in-out;
+    @apply lg:w-[15%] lg:translate-x-0 lg:!sticky lg:right-auto;
 }
 
 .containerRight {
     @apply flex flex-col gap-4 bg-off_white w-full;
-    @apply lg:w-[88%];
+    @apply lg:w-[85%];
 }
 
 .sideNav {
     @apply w-[80%] z-30 bg-white h-full relative p-4 flex flex-col justify-start items-start gap-4;
-    @apply lg:gap-12 lg:w-full;
+    @apply lg:p-6 lg:gap-12 lg:w-full;
 }
 
 .logoContainer {
@@ -44,7 +44,7 @@
 }
 
 .navToggler {
-    @apply fixed top-3 z-50 left-4 size-12 rounded-xl flex justify-center items-center bg-white shadow-md overflow-clip;
+    @apply absolute top-6 z-40 left-6 size-12 rounded-xl flex justify-center items-center bg-white shadow-md overflow-clip;
     @apply lg:hidden;
 }
 

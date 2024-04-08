@@ -1,0 +1,16 @@
+.container {
+    @apply flex flex-row justify-start items-center px-3 border gap-3 rounded-xl border-gray-light;
+}
+
+.searchIcon {
+    @apply size-6 fill-gray;
+}
+
+.container > input {
+    @apply outline-none bg-transparent py-1.5 text-sm text-cinder w-full;
+}
+
+.container > input::placeholder,
+.container > input::-webkit-input-placeholder {
+    @apply text-gray-light text-sm font-normal;
+}

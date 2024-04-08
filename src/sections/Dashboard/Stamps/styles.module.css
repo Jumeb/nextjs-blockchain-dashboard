@@ -1,0 +1,13 @@
+/* https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+ Bad pratice, but I prefer clean code and I don't mind jumping between files
+*/
+
+.stampsContainer {
+    @apply grid grid-cols-2 w-full gap-4 gap-y-6 divide-x-0 divide-primary;
+    @apply sm:grid-cols-3;
+    @apply xl:grid-cols-6 xl:divide-x;
+}
+
+.stampsContainer > div:not(:first-child) {
+    @apply xl:pl-6;
+}

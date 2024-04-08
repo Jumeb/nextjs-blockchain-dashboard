@@ -1,9 +1,17 @@
 import React from 'react'
+import { Inter } from 'next/font/google'
 
-import TestLayout from '@/components/blocks/DashboardLayout'
+const inter = Inter({ subsets: ['latin'] })
+import TestLayout from '@/components/blocks/TestLayout'
 
-const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return <TestLayout>{children}</TestLayout>
+const DashLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return (
+    <html lang='en'>
+      <body className={inter.className}>
+        <TestLayout>{children}</TestLayout>
+      </body>
+    </html>
+  )
 }
 
-export default DashboardLayout
+export default DashLayout

@@ -7,29 +7,16 @@ import Image from 'next/image'
 import { Assets } from '@/lib/assets/images'
 import NavLinks from '@/components/shared/NavLinks'
 import { NavLinkProps } from '@/lib/types/components.types'
-import {
-  Block,
-  Dashboard,
-  Ecosystem,
-  Heirachy,
-  Nodes,
-  Staking,
-  Stats,
-  Token,
-  Transaction,
-  Wallet,
-} from '@/lib/assets/icons'
+import { Block, Heirachy, Light, Nodes, Token, Wallet } from '@/lib/assets/icons'
 
-const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const TestLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const links: NavLinkProps[] = [
-    { href: '/', label: 'Dashboard', icon: <Dashboard />, disabled: false },
-    { href: '/addresses', label: 'Addresses', icon: <Wallet />, disabled: false },
-    { href: '/transactions', label: 'Transactions', icon: <Transaction />, disabled: false },
-    { href: '/blocks', label: 'Blocks', icon: <Block />, disabled: false },
-    { href: '/stats', label: 'Stats', icon: <Stats />, disabled: false },
-    { href: '/tokens', label: 'Tokens', icon: <Token />, disabled: false },
-    { href: '/staking', label: 'Staking', icon: <Staking />, disabled: false },
-    { href: '/ecosystem', label: 'Ecosystem', icon: <Nodes />, disabled: false },
+    { href: '#overview', label: 'Stamps', icon: <Wallet />, disabled: false },
+    { href: '#theme', label: 'Theme Switcher', icon: <Light />, disabled: false },
+    { href: '#cards', label: 'Cards', icon: <Token />, disabled: false },
+    { href: '#transactions', label: 'Transactions', icon: <Nodes />, disabled: false },
+    { href: '#blocks', label: 'Blocks', icon: <Heirachy />, disabled: false },
+    { href: '#stamps', label: 'Stamps', icon: <Block />, disabled: false },
   ]
   return (
     <ThemeProvide>
@@ -46,13 +33,7 @@ const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ children }) 
         <div className={[styles.containerLeft, 'dark:bg-cinder/50'].join(' ')}>
           <div className={[styles.sideNav, 'dark:bg-cinder'].join(' ')}>
             <div className={styles.logoContainer}>
-              <Image
-                src={Assets.logo1}
-                alt='Logo'
-                width={100}
-                height={100}
-                className='invert sepia saturate-0 hue-rotate-0 brightness-100 contrast-100 dark:filter-none'
-              />
+              <Image src={Assets.logo1} alt='Logo' width={100} height={100} />
             </div>
             <div className={styles.linksContainer}>
               <div className={styles.appLinks}>
@@ -73,4 +54,4 @@ const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ children }) 
   )
 }
 
-export default DashboardLayout
+export default TestLayout

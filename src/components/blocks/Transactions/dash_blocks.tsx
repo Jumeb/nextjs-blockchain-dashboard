@@ -2,7 +2,6 @@ import React from 'react'
 
 import styles from './styles.module.css'
 import Link from 'next/link'
-import { Chevron } from '@/lib/assets/icons'
 
 const DashBlock: React.FC = () => {
   return (
@@ -10,7 +9,9 @@ const DashBlock: React.FC = () => {
       {/* Dash Block header */}
       <div className={styles.containerHeader}>
         <h5 className='dark:text-white'>Blocks</h5>
-        <Link href={'#'} className='dark:text-primary-light'>View all</Link>
+        <Link href={'#'} className='dark:text-primary-light'>
+          View all
+        </Link>
       </div>
 
       <div className={styles.scrollContainer}>
@@ -20,19 +21,15 @@ const DashBlock: React.FC = () => {
         <div className={styles.dashTableHeader}>
           <div className={styles.firstBlockData}>
             <span className='dark:text-white'>Number</span>
-            <Chevron className={[styles.filterIcon, 'dark:fill-white'].join(' ')} />
           </div>
           <div className={styles.secondBlockData}>
             <span className='dark:text-white'>Amount</span>
-            <Chevron className={[styles.filterIcon, 'dark:fill-white'].join(' ')} />
           </div>
           <div className={styles.thirdBlockData}>
             <span className='dark:text-white'>Reward</span>
-            <Chevron className={[styles.filterIcon, 'dark:fill-white'].join(' ')} />
           </div>
           <div className={styles.fourthBlockData}>
             <span className='dark:text-white'>Time</span>
-            <Chevron className={[styles.filterIcon, 'dark:fill-white'].join(' ')} />
           </div>
         </div>
 
