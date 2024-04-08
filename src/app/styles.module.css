@@ -1,0 +1,15 @@
+/* https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+ Bad pratice, but I prefer clean code and I don't mind jumping between files
+*/
+
+.container {
+    @apply min-h-full w-full relative flex flex-col gap-4 pb-4;
+    @apply md:gap-8 md:pb-8;
+    @apply xl:gap-16 xl:pb-10;
+}
+
+.containerContent {
+    @apply flex flex-col gap-4 px-4 ;
+    @apply md:gap-8 md:px-8;
+    @apply xl:gap-16 xl:px-10;
+}

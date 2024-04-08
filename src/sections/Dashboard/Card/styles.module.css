@@ -1,0 +1,20 @@
+/* https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+ Bad pratice, but I prefer clean code and I don't mind jumping between files
+*/
+
+.cardsContainer {
+    @apply flex flex-row justify-between w-full flex-none items-center gap-4 duration-500 ease-in-out overflow-x-auto;
+    @apply xl:overflow-visible;
+}
+
+.cardsContainer::-webkit-scrollbar {
+    @apply w-1 h-1;
+}
+  
+.cardsContainer::-webkit-scrollbar-thumb {
+    @apply w-1 h-1 bg-gray-600 rounded-md;
+}
+  
+.cardsContainer::-webkit-scrollbar-track {
+    @apply w-1 h-1 bg-gray-300 rounded-md;
+}

@@ -1,0 +1,11 @@
+.container {
+    @apply flex flex-col w-full justify-center items-center;
+}
+
+.container > p:first-child {
+    @apply text-gray uppercase !text-xs !font-normal;
+}
+
+.container > p {
+    @apply text-primary-light text-xs font-normal;
+}

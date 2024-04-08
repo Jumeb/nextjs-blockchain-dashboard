@@ -6,6 +6,7 @@ export { default as Clock } from './clock.icon';
 export { default as Close } from './close.icon';
 export { default as Collapse } from './collapse.icon';
 export { default as Dark } from './dark.icon';
+export { default as Dashboard } from './dashboard.icon';
 export { default as Ecosystem } from './ecosystem.icon';
 export { default as Expand } from './expand.icon';
 export { default as Heirachy } from './heirachy.icon';

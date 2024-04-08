@@ -2,14 +2,17 @@
 
 import React from 'react'
 
-import 'chart.js/auto'
+// import 'chart.js/auto'
 import { Line } from 'react-chartjs-2'
+import { Chart as ChartJs, LineElement, CategoryScale, LinearScale, PointElement } from 'chart.js'
 import { ChartProps } from '@/lib/types/assets.types'
+
+ChartJs.register(LineElement, CategoryScale, LinearScale, PointElement)
 
 const LineChart: React.FC<ChartProps> = ({ data }) => {
   const options = {
     plugins: {
-        legend: false,
+      legend: false,
     },
     scales: {
       x: {
@@ -18,7 +21,7 @@ const LineChart: React.FC<ChartProps> = ({ data }) => {
         },
         gridLines: {
           display: false,
-          color: 'transparent'
+          color: 'transparent',
         },
       },
       y: {
@@ -28,13 +31,17 @@ const LineChart: React.FC<ChartProps> = ({ data }) => {
         position: 'right',
         gridLines: {
           display: false,
-          color: 'transparent'
+          color: 'transparent',
         },
       },
     },
   }
 
-  return <Line data={data} options={options} />
+  return (
+    <div>
+      <Line data={data} options={options} />
+    </div>
+  )
 }
 
 export default LineChart

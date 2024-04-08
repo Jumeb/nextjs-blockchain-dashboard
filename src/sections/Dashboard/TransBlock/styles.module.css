@@ -1,0 +1,19 @@
+/* https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+ Bad pratice, but I prefer clean code and I don't mind jumping between files
+*/
+
+.container {
+    @apply flex flex-col gap-4 justify-start items-stretch;
+    @apply xl:flex-row;
+}
+
+.containerTrans {
+    @apply flex;
+    @apply xl:w-[55%];
+
+}
+
+.containerBlock {
+    @apply flex;
+    @apply xl:w-[45%];
+}

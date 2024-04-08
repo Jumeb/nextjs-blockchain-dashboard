@@ -3,7 +3,7 @@
 */
 
 .stamp {
-    @apply w-full bg-transparent flex flex-row justify-center items-center gap-3;
+    @apply w-full bg-transparent flex flex-row justify-start items-center gap-3;
 }
 
 .stampIconContainer {

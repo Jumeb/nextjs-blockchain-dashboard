@@ -19,7 +19,7 @@ const Card: React.FC<CardProps> = ({ title, value, data }) => {
   UseOnClickOutside(cardRef, closeCard)
 
   return (
-    <div className='w-full lg:h-[256px] flex justify-center items-center' ref={cardRef}>
+    <div className='w-full flex justify-center items-center' ref={cardRef}>
       <div
         style={{
           left: position.left,
