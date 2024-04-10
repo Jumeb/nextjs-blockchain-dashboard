@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import styles from './styles.module.css'
 import SearchInput from '@/components/shared/SearchInput'
@@ -8,13 +8,30 @@ import { useForm } from '@/lib/hooks/useForm'
 import Stats from '@/components/shared/Stats'
 import DropDown from '@/components/shared/DropDown'
 import { TopBarDropList } from '@/lib/static/list'
+import { useAppDispatch, useAppSelector } from '@/redux/typings'
+import { RootState } from '@/redux/store'
+import { filterBlocks, filterTransactions } from '@/redux/dash/slice/dash.slice'
 
 const TopBar: React.FC = () => {
+  const dispatch = useAppDispatch()
+  const {transactions = [], blocks = []} = useAppSelector((state: RootState) => state.dashSlice)
   const { formdata, clearValue, onChange, updateDropForm } = useForm<{
     search: string
     dropdown: string
   }>({ search: '', dropdown: '' })
   const { search, dropdown } = formdata
+
+  useEffect(() => {
+    dispatch(filterTransactions({
+      transactions,
+      search
+    }))
+    dispatch(filterBlocks({
+      blocks,
+      search
+    }))
+  }, [dispatch, search, transactions, blocks])
+
   return (
     <div className={[styles.container, 'dark:bg-cinder'].join(' ')}>
       <div className={styles.hackSpace}></div>

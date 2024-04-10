@@ -1,0 +1,11 @@
+.spinner {
+    @apply w-14 h-14 border-[11.2px] border-primary border-double rounded-full;
+    border-left-style: solid;
+    animation: Spinner 0.75s infinite linear;
+ }
+ 
+ @keyframes Spinner {
+    to {
+       transform: rotate(360deg);
+    }
+ }

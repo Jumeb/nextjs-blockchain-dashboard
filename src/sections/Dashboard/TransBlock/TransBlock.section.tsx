@@ -3,6 +3,7 @@ import React from 'react'
 import styles from './styles.module.css'
 import DashTransaction from '@/components/blocks/Transactions/dash_transaction'
 import DashBlock from '@/components/blocks/Transactions/dash_blocks'
+import { TransBlockProps } from '@/lib/types/sections.types'
 
 const TransBlockSection: React.FC = () => {
   return (
