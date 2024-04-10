@@ -54,7 +54,7 @@
 }
 
 .dashTableBody {
-    @apply w-full flex justify-between items-center py-4;
+    @apply w-full flex justify-between items-center py-4 h-[65px];
 }
 
 .dashTableHeader > div {

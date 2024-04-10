@@ -14,7 +14,11 @@
     @apply lg:gap-8 xl:px-10;
 }
 
-.containerContent > h1 {
+.containerContent > div {
+    @apply flex flex-row w-full justify-between items-center;
+}
+
+.containerContent > div > h1 {
     @apply text-lg text-cinder font-bold;
     @apply md:text-xl;
     @apply xl:text-3xl;
