@@ -15,6 +15,5 @@
 }
 
 .button > span {
-    @apply text-base font-normal text-white hidden;
-    @apply md:block;
+    @apply text-base font-normal text-white;
 }

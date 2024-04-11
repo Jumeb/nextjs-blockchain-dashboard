@@ -12,7 +12,8 @@ const NavLinks: React.FC<{ link: NavLinkProps }> = ({ link }) => {
 
   return (
     <Link
-      href={link?.disabled ? '' :link.href}
+      aria-disabled={link.disabled}
+      href={link?.disabled ? '' : link.href}
       className={[
         styles.link,
         'dark:*:fill-white dark:before:bg-cinder-light dark:*:hover:text-off_white dark:*:hover:fill-off_white',

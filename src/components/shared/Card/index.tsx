@@ -30,7 +30,7 @@ const Card: React.FC<CardProps> = ({ title, value, data }) => {
         <div className={styles.cardHeader}>
           <div className={styles.cardDetail}>
             <h5 className='dark:text-white'>{title}</h5>
-            <p className='dark:text-white'>{value}</p>
+            <p data-testid='paragraph' className='dark:text-white'>{value}</p>
           </div>
           <button
             onClick={() => setExpand(!expand)}
@@ -44,7 +44,7 @@ const Card: React.FC<CardProps> = ({ title, value, data }) => {
             )}
           </button>
         </div>
-        <div className={styles.cardChart}>
+        <div  data-testid='chart' className={styles.cardChart}>
           <LineChart data={data} />
         </div>
       </div>
