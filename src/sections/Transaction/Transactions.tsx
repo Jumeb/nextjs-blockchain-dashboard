@@ -1,12 +1,12 @@
 import React from 'react'
 
 import styles from './styles.module.css'
-import TransactionTable from '@/components/blocks/Transactions/transactions'
+import TransactionsCardTable from '@/components/blocks/Transactions/Transaction/transactions'
 
 const Transactions: React.FC = () => {
   return (
     <section id='transactions' className={styles.container}>
-      <TransactionTable />
+      <TransactionsCardTable />
     </section>
   )
 }

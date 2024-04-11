@@ -32,13 +32,13 @@ const ThemeSwitch: React.FC = () => {
   }, [theme, setTheme])
   return (
     <div className={`${styles.switchContainer} dark:bg-cinder-light`} onClick={Switch}>
-      <Light className={`${styles.themeIcon} dark:fill-white left-1.5`} />
+      <Light data-testid='light' className={`${styles.themeIcon} dark:fill-white left-1.5`} />
       <div
         className={`${styles.switchButton} ${
           light ? styles.switchLight : styles.switchDark
         } dark:!bg-cinder-dark`}
       />
-      <Dark className={`${styles.themeIcon} dark:fill-white right-1.5`} />
+      <Dark data-testid='dark' className={`${styles.themeIcon} dark:fill-white right-1.5`} />
     </div>
   )
 }

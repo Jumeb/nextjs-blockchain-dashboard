@@ -54,7 +54,7 @@ const TopBar: React.FC = () => {
           <Stats title='Volume' value='$92,95M' />
         </div>
         <div className={[styles.userProfile, 'dark:bg-cinder-light'].join(' ')}>
-          <p className='dark:text-white'>JB</p>
+          <p data-testid='paragraph' className='dark:text-white'>JB</p>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 
 const Loading: React.FC = () => {
   return (
-    <div className={styles.spinner} />
+    <div className={styles.spinner} data-testid='loading' />
   );
 };
 

@@ -11,7 +11,7 @@ const Stamp: React.FC<{stamp: StampProps}> = ({stamp}) => {
       </div>
       <div className={styles.stampDetails}>
         <h6 className='dark:text-white'>{stamp.title}</h6>
-        <p className='dark:text-white'>{stamp.value}</p>
+        <p data-testid='paragraph' className='dark:text-white'>{stamp.value}</p>
       </div>
     </div>
   )
