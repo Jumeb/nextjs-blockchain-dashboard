@@ -6,6 +6,7 @@ import { shortenData } from '@/lib/utils/cleandata';
 import Type from '@/components/shared/Transaction'
 import Loading from '@/components/shared/Loading';
 import { Arrow } from '@/lib/assets/icons';
+import moment from 'moment';
 
 const TransactionsTable:React.FC<TransactionProps> = ({filteredTransactions, transactions, loading}) => {
     return (
@@ -81,7 +82,7 @@ const TransactionsTable:React.FC<TransactionProps> = ({filteredTransactions, tra
                   <span className='dark:text-white'>{transaction.amount}</span>
                 </div>
                 <div className={styles.eighthTransData}>
-                  <span className='dark:text-white'>{transaction.time}</span>
+                  <span className='dark:text-white'>{moment(transaction.time).fromNow()}</span>
                 </div>
                 <div className={[styles.ninthTransData, '!justify-start'].join(' ')}>
                   <span className='dark:text-white'>{transaction.fee}</span>

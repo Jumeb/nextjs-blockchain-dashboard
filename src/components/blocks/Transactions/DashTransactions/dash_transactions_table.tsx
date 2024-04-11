@@ -7,6 +7,7 @@ import Type from '@/components/shared/Transaction'
 import Link from 'next/link'
 import { shortenData } from '@/lib/utils/cleandata'
 import { Arrow, Refresh } from '@/lib/assets/icons'
+import moment from 'moment'
 
 const DashTransactionTable: React.FC<TransactionProps> = ({
   loading,
@@ -92,7 +93,7 @@ const DashTransactionTable: React.FC<TransactionProps> = ({
                 <span className='dark:text-white'>{transaction.amount}</span>
               </div>
               <div className={styles.seventhTransactionData}>
-                <span className='dark:text-white'>{transaction.time}</span>
+                <span className='dark:text-white'>{moment(transaction.time).fromNow()}</span>
               </div>
             </div>
           ))}

@@ -5,6 +5,7 @@ import { BlockProps } from '@/lib/types/components.types'
 import Loading from '@/components/shared/Loading'
 import { shortenData } from '@/lib/utils/cleandata'
 import { ThousandSeparator } from '@/lib/utils/functions'
+import moment from 'moment'
 
 const BlockCard: React.FC<BlockProps> = ({ filteredBlocks, blocks, loading }) => {
   return (
@@ -21,7 +22,7 @@ const BlockCard: React.FC<BlockProps> = ({ filteredBlocks, blocks, loading }) =>
               Time
             </span>
             <span data-testid='label' className='dark:text-white'>
-              {block.time}
+              {moment(block.time).fromNow()}
             </span>
           </div>
           <div className={[styles.cardBody, 'dark:divide-gray-300'].join(' ')}>

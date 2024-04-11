@@ -28,7 +28,7 @@ export interface TransactionsType {
 
 export interface BlocksType {
     number: number
-    amount: number
+    amount: string | number
     difficulty: number
     bloom: string
     hash: string

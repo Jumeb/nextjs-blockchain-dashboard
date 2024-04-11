@@ -5,6 +5,7 @@ import { BlockProps } from '@/lib/types/components.types'
 import Loading from '@/components/shared/Loading'
 import { shortenData } from '@/lib/utils/cleandata'
 import { ThousandSeparator } from '@/lib/utils/functions'
+import moment from 'moment'
 
 const BlocksTable: React.FC<BlockProps> = ({ blocks, filteredBlocks, loading }) => {
   return (
@@ -83,7 +84,7 @@ const BlocksTable: React.FC<BlockProps> = ({ blocks, filteredBlocks, loading }) 
                 <span className='dark:text-white'>{ThousandSeparator(block.gas_limit, ' ')}</span>
               </div>
               <div className={[styles.ninthBlocksData, '!justify-start'].join(' ')}>
-                <span className='dark:text-white'>{block.time}</span>
+                <span className='dark:text-white'>{moment(block.time).fromNow()}</span>
               </div>
             </div>
           ))}
