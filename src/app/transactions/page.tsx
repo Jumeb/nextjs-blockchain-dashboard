@@ -10,15 +10,18 @@ import { useAppDispatch, useAppSelector } from '@/redux/typings'
 import Loading from '@/components/shared/Loading'
 import { transactionsService } from '@/redux/dash/thunk/dash.thunk'
 import Notification from '@/components/shared/Notification/notification.component'
-import { resetNotifications } from '@/redux/dash/slice/dash.slice'
+import { resetNotifications, setTransOffset } from '@/redux/dash/slice/dash.slice'
+import { Refresh } from '@/lib/assets/icons'
 
 const TransactionsPage: React.FC = () => {
   const [notify, setNotify] = useState(false)
-  const { filteredTransactions, loading, error, success, message } = useAppSelector((state: RootState) => state.dashSlice)
+  const { filteredTransactions, loading, error, success, message, transOffset } = useAppSelector(
+    (state: RootState) => state.dashSlice,
+  )
   const dispatch = useAppDispatch()
   let transactionsQuery = `query MyQuery {
     EVM(network: eth) {
-      Transactions(limit: {count: 20}) {
+      Transactions(limit: {count: ${transOffset}}) {
         Transaction {
           To
           From
@@ -52,6 +55,11 @@ const TransactionsPage: React.FC = () => {
     }
   }, [error, dispatch, loading, success])
 
+  const refreshTransactions = () => {
+    dispatch(transactionsService(transactionsQuery))
+    dispatch(setTransOffset(20))
+  }
+
   return (
     <main className={[styles.container, 'dark:bg-cinder-light'].join(' ')}>
       <TopBar />
@@ -63,8 +71,14 @@ const TransactionsPage: React.FC = () => {
               <Loading />
             </div>
           )}
+          <button
+            onClick={refreshTransactions}
+            className={[styles.headerRefresh, 'dark:bg-cinder-light'].join(' ')}
+          >
+            <Refresh className={[styles.headerRefreshIcon, 'dark:fill-white'].join(' ')} />
+          </button>
         </div>
-        <Transactions />
+        <Transactions refreshTransactions={refreshTransactions} />
       </div>
       <Notification show={notify} setShow={setNotify} message={message} />
     </main>

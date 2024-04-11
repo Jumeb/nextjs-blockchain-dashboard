@@ -58,7 +58,7 @@ const BlocksTable: React.FC<BlockProps> = ({ blocks, filteredBlocks, loading }) 
                 </span>
               </div>
               <div className={styles.secondBlocksData}>
-                <span className='dark:text-white'>{block.tx_count} Transactions</span>
+                <span className='dark:text-white'>{block.amount}</span>
               </div>
               <div className={styles.thirdBlocksData}>
                 <span className='dark:text-white'>{block.difficulty}</span>

@@ -6,26 +6,30 @@ import Loading from '@/components/shared/Loading'
 import Type from '@/components/shared/Transaction'
 import Link from 'next/link'
 import { shortenData } from '@/lib/utils/cleandata'
-import { Arrow } from '@/lib/assets/icons'
+import { Arrow, Refresh } from '@/lib/assets/icons'
 
 const DashTransactionTable: React.FC<TransactionProps> = ({
   loading,
   filteredTransactions,
   transactions,
+  refreshTransactions
 }) => {
   return (
     <div className={[styles.container, 'dark:bg-cinder hidden md:flex'].join(' ')}>
       {/* Dash transaction header */}
       <div className={[styles.containerHeader, 'dark:bg-cinder-light/10'].join(' ')}>
-        <h5 className='dark:text-white'>Transactions</h5>
+        <h5 className='mr-auto dark:text-white'>Transactions</h5>
         {filteredTransactions.length != 0 && loading && (
-          <div className='scale-[0.6] ml-auto mr-2'>
+          <div className='scale-[0.6] mr-2'>
             <Loading />
           </div>
         )}
-        <Link href={'/transactions'} className='dark:text-primary-light'>
+        <Link href={'/transactions'} className='mr-2 dark:text-primary-light'>
           View all
         </Link>
+        <button onClick={refreshTransactions} className={[styles.headerRefresh, 'dark:bg-cinder-light'].join(' ')}>
+          <Refresh className={[styles.headerRefreshIcon, 'dark:fill-white'].join(' ')} />
+        </button>
       </div>
 
       <div className={styles.scrollContainer}>

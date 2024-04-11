@@ -71,12 +71,14 @@ export interface TransactionProps {
     loading: boolean
     transactions: TransactionsType[]
     filteredTransactions: TransactionsType[]
+    refreshTransactions?: () => void
 }
 
 export interface BlockProps {
     loading: boolean
     blocks: BlocksType[]
     filteredBlocks: BlocksType[]
+    refreshBlocks?: () => void
 }
 
 export interface NotificationProps {

@@ -4,25 +4,39 @@ import { BlockProps } from '@/lib/types/components.types'
 import DashBlockTable from './dash_blocks_table'
 import DashBlockCard from './dash_blocks_card'
 
-const DashBlock: React.FC<BlockProps> = ({loading, filteredBlocks, blocks}) => {
+const DashBlock: React.FC<BlockProps> = ({
+  loading,
+  filteredBlocks,
+  blocks,
+  refreshBlocks = () => {},
+}) => {
   return (
     <>
-      <DashBlockTable loading={loading} filteredBlocks={filteredBlocks} blocks={blocks} />
+      <DashBlockTable
+        loading={loading}
+        filteredBlocks={filteredBlocks}
+        blocks={blocks}
+        refreshBlocks={refreshBlocks}
+      />
 
-      <DashBlockCard loading={loading} filteredBlocks={filteredBlocks} blocks={blocks} />
+      <DashBlockCard
+        loading={loading}
+        filteredBlocks={filteredBlocks}
+        blocks={blocks}
+        refreshBlocks={refreshBlocks}
+      />
     </>
   )
 }
 
 export default DashBlock
 
-
 /**
  * Tables for larger screens
  * Enough space for clear understanding of the data
  * Less user interactions to reach need data
  * Better user experience
- * 
+ *
  * Card for smaller screens
  * Not enough space for tables
  * Data can become crowded in tables

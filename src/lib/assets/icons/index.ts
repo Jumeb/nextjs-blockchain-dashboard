@@ -12,6 +12,7 @@ export { default as Expand } from './expand.icon';
 export { default as Heirachy } from './heirachy.icon';
 export { default as Light } from './light.icon';
 export { default as Nodes } from './nodes.icon';
+export { default as Refresh } from './refresh.icon';
 export { default as Search } from './search.icon';
 export { default as Sending } from './sending.icon';
 export { default as Staking } from './staking.icon';

@@ -7,8 +7,8 @@ import { cleanBlocks, cleanTransaction } from "@/lib/utils/cleandata";
 const initialState: DashState = {
     transactions: [],
     blocks: [],
-    blocksOffset: 0,
-    transOffset: 0,
+    blocksOffset: 20,
+    transOffset: 20,
     loading: false,
     success: false,
     error: false,
@@ -25,8 +25,8 @@ const dashSlice = createSlice({
         resetState: state => {
             state.blocks = [];
             state.transactions = [];
-            state.transOffset = 0;
-            state.blocksOffset = 0;
+            state.transOffset = 20;
+            state.blocksOffset = 20;
             state.error = false;
             state.loading = false;
             state.message = '';
