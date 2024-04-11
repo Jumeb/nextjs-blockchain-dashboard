@@ -12,8 +12,11 @@ import { blocksService } from '@/redux/dash/thunk/dash.thunk'
 import { resetNotifications, setBlockOffset } from '@/redux/dash/slice/dash.slice'
 import Notification from '@/components/shared/Notification/notification.component'
 import { Refresh } from '@/lib/assets/icons'
+import TopButton from '@/components/shared/ScrollTop/Index'
+import { useScrollPosition } from '@/lib/hooks/UseScrollPosition'
 
 const BlocksPage: React.FC = () => {
+  const position = useScrollPosition();
   const [notify, setNotify] = useState(false)
   const { filteredBlocks, loading, success, message, error, blocksOffset } = useAppSelector(
     (state: RootState) => state.dashSlice,
@@ -76,6 +79,7 @@ const BlocksPage: React.FC = () => {
         <Blocks refreshBlocks={refreshBlocks} />
       </div>
       <Notification show={notify} setShow={setNotify} message={message} />
+      <TopButton show={position > 200} />
     </main>
   )
 }

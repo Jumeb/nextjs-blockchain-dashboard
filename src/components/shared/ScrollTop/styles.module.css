@@ -1,0 +1,22 @@
+
+
+
+/* Top button styles */
+
+.topButton {
+    @apply fixed bottom-0 rounded cursor-pointer z-50 right-4 h-10 aspect-square flex justify-center items-center bg-white shadow-xl shadow-primary-light/40 duration-500 ease-in-out;
+    @apply lg:right-8;
+    @apply lg:right-16;
+}
+
+.showTop {
+    @apply -translate-y-6;
+}
+
+.hideTop {
+    @apply translate-y-28;
+}
+
+.topIcon {
+    @apply fill-primary size-4;
+}
