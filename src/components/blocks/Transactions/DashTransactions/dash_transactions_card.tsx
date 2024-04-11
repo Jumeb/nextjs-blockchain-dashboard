@@ -6,24 +6,29 @@ import Type from '@/components/shared/Transaction'
 import Link from 'next/link'
 import Loading from '@/components/shared/Loading'
 import { shortenData } from '@/lib/utils/cleandata'
+import { Refresh } from '@/lib/assets/icons'
 
 const DashTransactionCard: React.FC<TransactionProps> = ({
   filteredTransactions,
   loading,
   transactions,
+  refreshTransactions
 }) => {
   return (
     <div className={styles.cards}>
       <div className={[styles.containerHeader, 'dark:bg-cinder-light/50'].join(' ')}>
-        <h5 className='dark:text-white'>Transactions</h5>
+        <h5 className='mr-auto dark:text-white'>Transactions</h5>
         {filteredTransactions.length != 0 && loading && (
-          <div className='scale-[0.6] ml-auto mr-2'>
+          <div className='scale-[0.6]mr-2'>
             <Loading />
           </div>
         )}
-        <Link href={'/transactions'} className='dark:text-primary-light'>
+        <Link href={'/transactions'} className='mr-2 dark:text-primary-light'>
           View all
         </Link>
+        <button onClick={refreshTransactions} className={[styles.headerRefresh, 'dark:bg-cinder-light'].join(' ')}>
+          <Refresh className={[styles.headerRefreshIcon, 'dark:fill-white'].join(' ')} />
+        </button>
       </div>
       {filteredTransactions.length === 0 && transactions.length === 0 && loading && (
         <div className='w-full flex justify-center items-center scale-125'>

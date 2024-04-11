@@ -5,20 +5,24 @@ import { BlockProps } from '@/lib/types/components.types'
 import Loading from '@/components/shared/Loading'
 import Link from 'next/link'
 import { ThousandSeparator } from '@/lib/utils/functions'
+import { Refresh } from '@/lib/assets/icons'
 
-const DashBlockCard: React.FC<BlockProps> = ({ loading, filteredBlocks, blocks }) => {
+const DashBlockCard: React.FC<BlockProps> = ({ loading, filteredBlocks, blocks, refreshBlocks }) => {
   return (
     <div className={styles.cards}>
       <div className={[styles.containerHeader, 'dark:bg-cinder-light/50'].join(' ')}>
-        <h5 className='dark:text-white'>Blocks</h5>
+        <h5 className='mr-auto dark:text-white'>Blocks</h5>
         {filteredBlocks.length != 0 && loading && (
-          <div className='scale-[0.6] ml-auto mr-2'>
+          <div className='scale-[0.6] mr-2'>
             <Loading />
           </div>
         )}
-        <Link href={'/blocks'} className='dark:text-primary-light'>
+        <Link href={'/blocks'} className='mr-2 dark:text-primary-light'>
           View all
         </Link>
+        <button onClick={refreshBlocks} className={[styles.headerRefresh, 'dark:bg-cinder-light'].join(' ')}>
+          <Refresh className={[styles.headerRefreshIcon, 'dark:fill-white'].join(' ')} />
+        </button>
       </div>
       {filteredBlocks.length === 0 && blocks.length === 0 && loading && (
         <div className='w-fit mx-auto flex justify-center items-center scale-125 my-14'>

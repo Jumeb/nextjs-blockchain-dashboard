@@ -29,6 +29,8 @@ const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ children }) 
     { href: '/staking', label: 'Staking', icon: <Staking />, disabled: true },
     { href: '/ecosystem', label: 'Ecosystem', icon: <Nodes />, disabled: true },
   ]
+
+
   return (
     <ThemeProvide>
       <div className={styles.container}>

@@ -65,6 +65,6 @@
 
 .checkToggle:checked ~ .navToggler > .navHamburger {
     @apply translate-x-full bg-transparent;
-    @apply before:translate-y-0 before:rotate-45 before:-translate-x-full before:opacity-100;
-    @apply after:translate-y-0 after:-rotate-45 after:-translate-x-full;
+    @apply before:translate-y-0 before:rotate-[135deg] before:-translate-x-full before:opacity-100;
+    @apply after:translate-y-0 after:-rotate-[135deg] after:-translate-x-full;
 }

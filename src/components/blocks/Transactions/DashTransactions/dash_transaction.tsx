@@ -8,6 +8,7 @@ const DashTransaction: React.FC<TransactionProps> = ({
   transactions,
   filteredTransactions,
   loading,
+  refreshTransactions = () => {}
 }) => {
   return (
     <>
@@ -15,11 +16,13 @@ const DashTransaction: React.FC<TransactionProps> = ({
         loading={loading}
         filteredTransactions={filteredTransactions}
         transactions={transactions}
+        refreshTransactions={refreshTransactions}
       />
       <DashTransactionCard
         loading={loading}
         filteredTransactions={filteredTransactions}
         transactions={transactions}
+        refreshTransactions={refreshTransactions}
       />
     </>
   )

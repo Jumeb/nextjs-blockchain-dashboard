@@ -9,16 +9,19 @@ import Loading from '@/components/shared/Loading'
 import { useAppDispatch, useAppSelector } from '@/redux/typings'
 import { RootState } from '@/redux/store'
 import { blocksService } from '@/redux/dash/thunk/dash.thunk'
-import { resetNotifications } from '@/redux/dash/slice/dash.slice'
+import { resetNotifications, setBlockOffset } from '@/redux/dash/slice/dash.slice'
 import Notification from '@/components/shared/Notification/notification.component'
+import { Refresh } from '@/lib/assets/icons'
 
 const BlocksPage: React.FC = () => {
   const [notify, setNotify] = useState(false)
-  const { filteredBlocks, loading, success, message, error } = useAppSelector((state: RootState) => state.dashSlice)
+  const { filteredBlocks, loading, success, message, error, blocksOffset } = useAppSelector(
+    (state: RootState) => state.dashSlice,
+  )
   const dispatch = useAppDispatch()
   let blocksQuery = `query MyQuery {
     EVM(network: eth) {
-      Blocks(limit: {count: 20}) {
+      Blocks(limit: {count: ${blocksOffset}}) {
         Block {
           Number
           Time
@@ -47,6 +50,11 @@ const BlocksPage: React.FC = () => {
     }
   }, [error, dispatch, loading, success])
 
+  const refreshBlocks = () => {
+    dispatch(blocksService(blocksQuery))
+    dispatch(setBlockOffset(20))
+  }
+
   return (
     <main className={[styles.container, 'dark:bg-cinder-light'].join(' ')}>
       <TopBar />
@@ -58,8 +66,14 @@ const BlocksPage: React.FC = () => {
               <Loading />
             </div>
           )}
+          <button
+            onClick={refreshBlocks}
+            className={[styles.headerRefresh, 'dark:bg-cinder-light'].join(' ')}
+          >
+            <Refresh className={[styles.headerRefreshIcon, 'dark:fill-white'].join(' ')} />
+          </button>
         </div>
-        <Blocks />
+        <Blocks refreshBlocks={refreshBlocks} />
       </div>
       <Notification show={notify} setShow={setNotify} message={message} />
     </main>
