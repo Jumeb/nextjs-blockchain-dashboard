@@ -8,7 +8,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Dashboard - Blockchain',
-  description: 'Blockchain platform to view information about past and present Blocks and Transactions',
+  description:
+    'Blockchain platform to view information about past and present Blocks and Transactions',
 }
 
 export default function RootLayout({
