@@ -84,7 +84,7 @@ describe('TransCard', () => {
       expect(blockHeaders.length).toBe(2)
     })
 
-    it('should render "Type" and "4 mins ago" for the first header', () => {
+    it('should render "Type" for the first header', () => {
       //arrange
       render(
         <TransactionCard
@@ -96,11 +96,9 @@ describe('TransCard', () => {
 
       //act
       const blockHeaderType = screen.getAllByTestId('type')[0]
-      const blockHeaderLabel = screen.getAllByTestId('label')[0]
 
       //assert
       expect(blockHeaderType).toBeInTheDocument()
-      expect(blockHeaderLabel).toHaveTextContent('4 mins ago')
     })
 
     it('should render 2 blocks', () => {

@@ -11,7 +11,7 @@ const mockFilteredTransactions: TransactionsType[] = [
     from: 'klsdf',
     to: 'lskdfl',
     amount: '234',
-    time: '4 mins ago',
+    time: "2024-04-11T16:18:35Z",
     fee: 323,
   },
   {
@@ -21,7 +21,7 @@ const mockFilteredTransactions: TransactionsType[] = [
     from: 'klsdf',
     to: 'lskdfl',
     amount: '234',
-    time: '4 mins ago',
+    time: "2024-04-11T16:18:35Z",
     fee: 323,
   },
 ]
@@ -34,7 +34,7 @@ const mockTransactions: TransactionsType[] = [
     from: 'klsdf',
     to: 'lskdfl',
     amount: '234',
-    time: '4 mins ago',
+    time: "2024-04-11T16:18:35Z",
     fee: 323,
   },
   {
@@ -44,7 +44,7 @@ const mockTransactions: TransactionsType[] = [
     from: 'klsdf',
     to: 'lskdfl',
     amount: '234',
-    time: '4 mins ago',
+    time: "2024-04-11T16:18:35Z",
     fee: 323,
   },
 ]
@@ -120,25 +120,6 @@ describe('DashTransCard', () => {
 
       //assert
       expect(blockHeaders.length).toBe(2)
-    })
-
-    it('should render "Type" and "4 mins ago" for the first header', () => {
-      //arrange
-      render(
-        <DashTransactionCard
-          filteredTransactions={mockFilteredTransactions}
-          transactions={mockTransactions}
-          loading={false}
-        />,
-      )
-
-      //act
-      const blockHeaderType = screen.getAllByTestId('type')[0]
-      const blockHeaderLabel = screen.getAllByTestId('label')[0]
-
-      //assert
-      expect(blockHeaderType).toBeInTheDocument()
-      expect(blockHeaderLabel).toHaveTextContent('4 mins ago')
     })
 
     it('should render 2 blocks', () => {

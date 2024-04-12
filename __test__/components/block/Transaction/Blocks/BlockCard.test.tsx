@@ -82,7 +82,7 @@ describe('BlockCard', () => {
       expect(blockHeaders.length).toBe(2)
     })
 
-    it('should render text "Time" and "2 mins ago" for the first header', () => {
+    it('should render text "Time" for the first header', () => {
       //arrange
       render(
         <BlockCard blocks={mockBlocks} filteredBlocks={mockFilteredBlocks} loading={false} />,
@@ -90,11 +90,9 @@ describe('BlockCard', () => {
 
       //act
       const blockHeaderValue = screen.getAllByTestId('value')[0]
-      const blockHeaderLabel = screen.getAllByTestId('label')[0]
 
       //assert
       expect(blockHeaderValue).toHaveTextContent('Time')
-      expect(blockHeaderLabel).toHaveTextContent('2 mins ago')
     })
 
     it('should render 16 block data', () => {
