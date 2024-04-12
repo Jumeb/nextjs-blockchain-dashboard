@@ -17,7 +17,7 @@ import TopButton from '@/components/shared/ScrollTop/Index'
 import Footer from '@/sections/Footer/Footer.section'
 
 const TransactionsPage: React.FC = () => {
-  const position = useScrollPosition();
+  const position = useScrollPosition()
   const [notify, setNotify] = useState(false)
   const { filteredTransactions, loading, error, success, message, transOffset } = useAppSelector(
     (state: RootState) => state.dashSlice,
@@ -86,7 +86,7 @@ const TransactionsPage: React.FC = () => {
       </div>
       <Notification show={notify} setShow={setNotify} message={message} />
       <TopButton show={position > 200} />
-        <Footer />
+      <Footer />
     </main>
   )
 }
