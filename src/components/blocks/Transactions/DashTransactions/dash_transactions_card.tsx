@@ -7,6 +7,7 @@ import Link from 'next/link'
 import Loading from '@/components/shared/Loading'
 import { shortenData } from '@/lib/utils/cleandata'
 import { Refresh } from '@/lib/assets/icons'
+import moment from 'moment'
 
 const DashTransactionCard: React.FC<TransactionProps> = ({
   filteredTransactions,
@@ -39,7 +40,7 @@ const DashTransactionCard: React.FC<TransactionProps> = ({
         <div data-testid="block" key={index} className={[styles.card, 'dark:bg-cinder'].join(' ')}>
           <div data-testid="block-header" className={styles.cardHeader}>
             <Type type={transaction.type} />
-            <span data-testid="label" className='dark:text-white'>{transaction.time}</span>
+            <span data-testid="label" className='dark:text-white'>{moment(transaction.time).fromNow()}</span>
           </div>
           <div className={[styles.cardBody, 'dark:divide-gray-300'].join(' ')}>
             <div className={styles.cardBodyData}>

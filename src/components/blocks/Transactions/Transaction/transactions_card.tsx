@@ -5,6 +5,7 @@ import Type from '@/components/shared/Transaction'
 import { TransactionProps } from '@/lib/types/components.types'
 import Loading from '@/components/shared/Loading'
 import { shortenData } from '@/lib/utils/cleandata'
+import moment from 'moment'
 
 const TransactionCard: React.FC<TransactionProps> = ({filteredTransactions, transactions, loading}) => {
   return (
@@ -18,7 +19,7 @@ const TransactionCard: React.FC<TransactionProps> = ({filteredTransactions, tran
         <div data-testid='block' key={index} className={[styles.card, 'dark:bg-cinder'].join(' ')}>
           <div data-testid='block-header' className={styles.cardHeader}>
             <Type type={transaction.type} />
-            <span data-testid='label' className='dark:text-white'>{transaction.time}</span>
+            <span data-testid='label' className='dark:text-white'>{moment(transaction.time).fromNow()}</span>
           </div>
           <div className={[styles.cardBody, 'dark:divide-gray-300'].join(' ')}>
             <div className={styles.cardBodyData}>

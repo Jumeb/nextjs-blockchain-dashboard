@@ -6,6 +6,7 @@ import { ThousandSeparator } from '@/lib/utils/functions'
 import Loading from '@/components/shared/Loading'
 import Link from 'next/link'
 import { Refresh } from '@/lib/assets/icons'
+import moment from 'moment'
 
 const DashBlockTable: React.FC<BlockProps> = ({ filteredBlocks, loading, blocks, refreshBlocks = () => {} }) => {
   return (
@@ -66,7 +67,7 @@ const DashBlockTable: React.FC<BlockProps> = ({ filteredBlocks, loading, blocks,
                 <span className='dark:text-white'>{ThousandSeparator(block.gas_used, ' ')}</span>
               </div>
               <div className={styles.fourthBlockData}>
-                <span className='dark:text-white'>{block.time}</span>
+                <span className='dark:text-white'>{moment(block.time).fromNow()}</span>
               </div>
             </div>
           ))}

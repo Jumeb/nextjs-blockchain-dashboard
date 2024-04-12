@@ -6,6 +6,7 @@ import Loading from '@/components/shared/Loading'
 import Link from 'next/link'
 import { ThousandSeparator } from '@/lib/utils/functions'
 import { Refresh } from '@/lib/assets/icons'
+import moment from 'moment'
 
 const DashBlockCard: React.FC<BlockProps> = ({ loading, filteredBlocks, blocks, refreshBlocks }) => {
   return (
@@ -33,7 +34,7 @@ const DashBlockCard: React.FC<BlockProps> = ({ loading, filteredBlocks, blocks, 
         <div key={index} data-testid='block' className={[styles.card, 'dark:bg-cinder'].join(' ')}>
           <div className={styles.cardHeader} data-testid='block-header'>
             <span data-testid="value" className='!font-bold dark:text-white'>Time</span>
-            <span data-testid="label" className='dark:text-white'>{block.time}</span>
+            <span data-testid="label" className='dark:text-white'>{moment(block.time).fromNow()}</span>
           </div>
           <div className={[styles.cardBody, 'dark:divide-gray-300'].join(' ')}>
             <div data-testid='block-data' className={styles.cardBodyData}>
