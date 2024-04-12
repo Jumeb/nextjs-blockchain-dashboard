@@ -14,9 +14,10 @@ import Notification from '@/components/shared/Notification/notification.componen
 import { Refresh } from '@/lib/assets/icons'
 import TopButton from '@/components/shared/ScrollTop/Index'
 import { useScrollPosition } from '@/lib/hooks/useScrollPosition'
+import Footer from '@/sections/Footer/Footer.section'
 
 const BlocksPage: React.FC = () => {
-  const position = useScrollPosition();
+  const position = useScrollPosition()
   const [notify, setNotify] = useState(false)
   const { filteredBlocks, loading, success, message, error, blocksOffset } = useAppSelector(
     (state: RootState) => state.dashSlice,
@@ -80,6 +81,7 @@ const BlocksPage: React.FC = () => {
       </div>
       <Notification show={notify} setShow={setNotify} message={message} />
       <TopButton show={position > 200} />
+      <Footer />
     </main>
   )
 }

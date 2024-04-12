@@ -14,6 +14,7 @@ import { resetNotifications, setTransOffset } from '@/redux/dash/slice/dash.slic
 import { Refresh } from '@/lib/assets/icons'
 import { useScrollPosition } from '@/lib/hooks/useScrollPosition'
 import TopButton from '@/components/shared/ScrollTop/Index'
+import Footer from '@/sections/Footer/Footer.section'
 
 const TransactionsPage: React.FC = () => {
   const position = useScrollPosition();
@@ -85,6 +86,7 @@ const TransactionsPage: React.FC = () => {
       </div>
       <Notification show={notify} setShow={setNotify} message={message} />
       <TopButton show={position > 200} />
+        <Footer />
     </main>
   )
 }
