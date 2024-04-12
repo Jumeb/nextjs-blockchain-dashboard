@@ -66,7 +66,7 @@ const DashTransactionTable: React.FC<TransactionProps> = ({
               <Loading />
             </div>
           )}
-          {filteredTransactions.map((transaction, index: number) => (
+          {filteredTransactions.slice(0, 15).map((transaction, index: number) => (
             <div data-testid='block' key={index} className={styles.dashTableBody}>
               <div className={styles.firstTransactionData}>
                 <Type type={transaction.type} />

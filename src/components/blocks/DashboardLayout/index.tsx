@@ -17,6 +17,7 @@ import {
   Transaction,
   Wallet,
 } from '@/lib/assets/icons'
+import Link from 'next/link'
 
 const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const links: NavLinkProps[] = [
@@ -45,7 +46,7 @@ const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ children }) 
         </label>
         <div className={[styles.containerLeft, 'dark:bg-cinder/50'].join(' ')}>
           <div className={[styles.sideNav, 'dark:bg-cinder'].join(' ')}>
-            <div className={styles.logoContainer}>
+            <Link href={'https://jumeb.github.io/'} target='__blank' className={styles.logoContainer}>
               <Image
                 src={Assets.logo1}
                 alt='Logo'
@@ -53,7 +54,7 @@ const DashboardLayout: React.FC<{ children: React.ReactNode }> = ({ children }) 
                 height={100}
                 className='invert sepia saturate-0 hue-rotate-0 brightness-100 contrast-100 dark:filter-none'
               />
-            </div>
+            </Link>
             <div className={styles.linksContainer}>
               <div className={styles.appLinks}>
                 {links.map((link, index: number) => (
