@@ -12,7 +12,7 @@ import { transactionsService } from '@/redux/dash/thunk/dash.thunk'
 import Notification from '@/components/shared/Notification/notification.component'
 import { resetNotifications, setTransOffset } from '@/redux/dash/slice/dash.slice'
 import { Refresh } from '@/lib/assets/icons'
-import { useScrollPosition } from '@/lib/hooks/UseScrollPosition'
+import { useScrollPosition } from '@/lib/hooks/useScrollPosition'
 import TopButton from '@/components/shared/ScrollTop/Index'
 
 const TransactionsPage: React.FC = () => {

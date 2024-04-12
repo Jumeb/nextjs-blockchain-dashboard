@@ -22,11 +22,13 @@ const TransBlockSection: React.FC = () => {
     filteredTransactions,
     blocks,
     filteredBlocks,
+    transOffset,
+    blocksOffset
   } = useAppSelector((state: RootState) => state.dashSlice)
   const dispatch = useAppDispatch()
   let transactionsQuery = `query MyQuery {
     EVM(network: eth) {
-      Transactions(limit: {count: 15}) {
+      Transactions(limit: {count: ${transOffset}}) {
         Transaction {
           To
           From
@@ -49,7 +51,7 @@ const TransBlockSection: React.FC = () => {
 
   let blocksQuery = `query MyQuery {
     EVM(network: eth) {
-      Blocks(limit: {count: 15}) {
+      Blocks(limit: {count: ${blocksOffset}}) {
         Block {
           Number
           Time

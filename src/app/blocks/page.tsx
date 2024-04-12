@@ -13,7 +13,7 @@ import { resetNotifications, setBlockOffset } from '@/redux/dash/slice/dash.slic
 import Notification from '@/components/shared/Notification/notification.component'
 import { Refresh } from '@/lib/assets/icons'
 import TopButton from '@/components/shared/ScrollTop/Index'
-import { useScrollPosition } from '@/lib/hooks/UseScrollPosition'
+import { useScrollPosition } from '@/lib/hooks/useScrollPosition'
 
 const BlocksPage: React.FC = () => {
   const position = useScrollPosition();

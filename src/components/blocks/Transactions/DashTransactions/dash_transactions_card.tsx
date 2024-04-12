@@ -36,7 +36,7 @@ const DashTransactionCard: React.FC<TransactionProps> = ({
           <Loading />
         </div>
       )}
-      {filteredTransactions.map((transaction, index: number) => (
+      {filteredTransactions.slice(0, 15).map((transaction, index: number) => (
         <div data-testid="block" key={index} className={[styles.card, 'dark:bg-cinder'].join(' ')}>
           <div data-testid="block-header" className={styles.cardHeader}>
             <Type type={transaction.type} />
