@@ -13,7 +13,7 @@ const mockFilteredBlocks: BlocksType[] = [
     hash: 'Fsdfsdf',
     gas_limit: 3234,
     gas_used: 2342,
-    time: '2 mins ago',
+    time: "2024-04-11T16:18:35Z",
   },
   {
     number: 1234323,
@@ -24,7 +24,7 @@ const mockFilteredBlocks: BlocksType[] = [
     hash: 'Fsdfsdf',
     gas_limit: 3234,
     gas_used: 2342,
-    time: '2 mins ago',
+    time: "2024-04-11T16:18:35Z",
   },
 ]
 
@@ -38,7 +38,7 @@ const mockBlocks: BlocksType[] = [
     hash: 'Fsdfsdf',
     gas_limit: 3234,
     gas_used: 2342,
-    time: '2 mins ago',
+    time: "2024-04-11T16:18:35Z",
   },
   {
     number: 1234323,
@@ -49,7 +49,7 @@ const mockBlocks: BlocksType[] = [
     hash: 'Fsdfsdf',
     gas_limit: 3234,
     gas_used: 2342,
-    time: '2 mins ago',
+    time: "2024-04-11T16:18:35Z",
   },
 ]
 

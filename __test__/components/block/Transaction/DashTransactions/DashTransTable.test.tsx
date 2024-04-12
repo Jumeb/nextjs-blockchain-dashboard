@@ -11,7 +11,7 @@ const mockFilteredTransactions: TransactionsType[] = [
     from: 'klsdf',
     to: 'lskdfl',
     amount: '234',
-    time: '4 mins ago',
+    time: "2024-04-11T16:18:35Z",
     fee: 323,
   },
   {
@@ -21,7 +21,7 @@ const mockFilteredTransactions: TransactionsType[] = [
     from: 'klsdf',
     to: 'lskdfl',
     amount: '234',
-    time: '4 mins ago',
+    time: "2024-04-11T16:18:35Z",
     fee: 323,
   },
 ]
@@ -34,7 +34,7 @@ const mockTransactions: TransactionsType[] = [
     from: 'klsdf',
     to: 'lskdfl',
     amount: '234',
-    time: '4 mins ago',
+    time: "2024-04-11T16:18:35Z",
     fee: 323,
   },
   {
@@ -44,7 +44,7 @@ const mockTransactions: TransactionsType[] = [
     from: 'klsdf',
     to: 'lskdfl',
     amount: '234',
-    time: '4 mins ago',
+    time: "2024-04-11T16:18:35Z",
     fee: 323,
   },
 ]

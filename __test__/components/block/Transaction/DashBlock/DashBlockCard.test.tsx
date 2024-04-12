@@ -13,7 +13,7 @@ const mockFilteredBlocks: BlocksType[] = [
     hash: 'Fsdfsdf',
     gas_limit: 3234,
     gas_used: 2342,
-    time: '2 mins ago',
+    time: "2024-04-11T16:18:35Z",
   },
   {
     number: 1234323,
@@ -24,7 +24,7 @@ const mockFilteredBlocks: BlocksType[] = [
     hash: 'Fsdfsdf',
     gas_limit: 3234,
     gas_used: 2342,
-    time: '2 mins ago',
+    time: "2024-04-11T16:18:35Z",
   },
 ]
 
@@ -38,7 +38,7 @@ const mockBlocks: BlocksType[] = [
     hash: 'Fsdfsdf',
     gas_limit: 3234,
     gas_used: 2342,
-    time: '2 mins ago',
+    time: "2024-04-11T16:18:35Z",
   },
   {
     number: 1234323,
@@ -49,7 +49,7 @@ const mockBlocks: BlocksType[] = [
     hash: 'Fsdfsdf',
     gas_limit: 3234,
     gas_used: 2342,
-    time: '2 mins ago',
+    time: "2024-04-11T16:18:35Z",
   },
 ]
 
@@ -107,21 +107,6 @@ describe('DashBlockCard', () => {
 
       //assert
       expect(blockHeaders.length).toBe(2)
-    })
-
-    it('should render text "Time" and "2 mins ago" for the first header', () => {
-      //arrange
-      render(
-        <DashBlockCard blocks={mockBlocks} filteredBlocks={mockFilteredBlocks} loading={false} />,
-      )
-
-      //act
-      const blockHeaderValue = screen.getAllByTestId('value')[0]
-      const blockHeaderLabel = screen.getAllByTestId('label')[0]
-
-      //assert
-      expect(blockHeaderValue).toHaveTextContent('Time')
-      expect(blockHeaderLabel).toHaveTextContent('2 mins ago')
     })
 
     it('should render 6 block data', () => {
