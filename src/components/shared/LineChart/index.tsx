@@ -27,7 +27,7 @@ const LineChart: React.FC<ChartProps> = ({ data }) => {
         // },
       },
       y: {
-        position: 'right',
+        position: 'right' as "center" | "right" | "left" | "top" | "bottom" ,
         grid: {
           display: false,
         },
